@@ -1,6 +1,6 @@
-# Tarot Brasil
+# Taro Brasil
 
-Bem-vindo ao repositório do **Tarot Brasil**, uma landing page desenvolvida com o intuito de promover serviços relacionados ao Tarot. Este projeto tem uma finalidade comercial e também serve como um espaço para praticar e aprimorar minhas habilidades em desenvolvimento web.
+Bem-vindo ao repositório do **Taro Brasil**, uma landing page desenvolvida com o intuito de promover serviços relacionados ao Taro. Este projeto tem uma finalidade comercial e também serve como um espaço para praticar e aprimorar minhas habilidades em desenvolvimento web.
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -12,7 +12,7 @@ Este projeto foi criado utilizando as seguintes tecnologias:
 
 ## 🌟 Objetivos do Projeto
 
-1. **Comercial**: Criar uma landing page profissional e visualmente atraente para apresentar os serviços de Tarot.
+1. **Comercial**: Criar uma landing page profissional e visualmente atraente para apresentar os serviços de Taro.
 2. **Prática**: Consolidar habilidades em desenvolvimento front-end, incluindo:
    - Estruturação de páginas com HTML.
    - Criação de layouts modernos e responsivos com CSS.
@@ -21,7 +21,7 @@ Este projeto foi criado utilizando as seguintes tecnologias:
 ## 📋 Funcionalidades Planejadas
 
 - Design responsivo para dispositivos móveis e desktop.
-- Seções informativas sobre os serviços de Tarot oferecidos.
+- Seções informativas sobre os serviços de Taro oferecidos.
 - Botões de chamada para ação (CTAs), como "Agendar uma consulta".
 - Possibilidade de integração com redes sociais ou plataformas de contato.
 
