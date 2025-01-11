@@ -1,10 +1,24 @@
 @import "./styles/reset.css";
+@font-face {
+    font-family: "fontLinkHeader";
+    src: url('assets/fonts/Elementary_Gothic_Bookhand.otf') format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+/*variável de fonts*/
+    --linkHeader-font: 'fontLinkHeader', sans-serif;
+/*variável cor das fonts*/
+    --brancoPadrao-fontColor: #fff;
+    --brancoHover-fontColor: #a5a5a5;
+}
 
 /*header geral*/
 .main-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     padding: 10px 20px;
     background-color: #4b0082; /*cor apenas para configuração do header*/
 }
@@ -20,12 +34,23 @@
 
 .main-nav .nav-link {
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+    color: var(--brancoPadrao-fontColor);
+    font-family: var(--linkHeader-font);
+    font-size: 15px;
+}
+
+.main-nav .nav-link:hover{
+    color: var(--brancoHover-fontColor);
+
 }
 
 /*redes sociais*/
 .social-media {
     display: flex;
     gap: 20px;
+}
+
+.social-media a :hover {
+    background-color: rgb(250, 53, 250);
+    border-radius: 10px;
 }
