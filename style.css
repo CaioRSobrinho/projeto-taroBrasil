@@ -19,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding: 10px 20px;
+    padding: 10px 50px;
     background-color: #4b0082; /*cor apenas para configuração do header*/
 }
 
@@ -48,6 +48,10 @@
 .social-media {
     display: flex;
     gap: 20px;
+}
+
+.social-icon {
+    width: 30px;
 }
 
 .social-media a :hover {
