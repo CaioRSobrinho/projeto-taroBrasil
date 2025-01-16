@@ -1,60 +1,162 @@
 @import "./styles/reset.css";
 @font-face {
-    font-family: "fontLinkHeader";
+    font-family: "elementary_gothic";
     src: url('assets/fonts/Elementary_Gothic_Bookhand.otf') format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "helvetica";
+    src: url('assets/fonts/Helvetica.ttf') format(truetype);
     font-weight: normal;
     font-style: normal;
 }
 
 :root {
 /*variável de fonts*/
-    --linkHeader-font: 'fontLinkHeader', sans-serif;
+    --linkHeader-font: 'elementary_gothic', sans-serif;
+    --textBanner-font: 'helvetica', sans-serif;
 /*variável cor das fonts*/
     --brancoPadrao-fontColor: #fff;
     --brancoHover-fontColor: #a5a5a5;
+    --background-footer: #990099;
 }
 
-/*header geral*/
+/* Header Geral */
 .main-header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: baseline; /* Centraliza verticalmente os itens */
     padding: 10px 50px;
-    background-color: #4b0082; /*cor apenas para configuração do header*/
+    background-color: #4b0082; /* Cor de fundo do header */
+    color: var(--brancoPadrao-fontColor); /* Cor padrão para texto */
 }
 
-/*navegação*/
+/* Navegação */
 .main-nav .nav-list {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
+    display: flex; /* Exibe os itens em linha */
+    list-style: none; /* Remove os marcadores da lista */
+    gap: 20px; /* Espaçamento entre os links */
+    padding: 0; /* Remove padding padrão */
+    margin: 0; /* Remove margem padrão */
 }
 
 .main-nav .nav-link {
-    text-decoration: none;
-    color: var(--brancoPadrao-fontColor);
-    font-family: var(--linkHeader-font);
-    font-size: 15px;
+    text-decoration: none; /* Remove sublinhado */
+    color: var(--brancoPadrao-fontColor); /* Cor do texto */
+    font-family: var(--linkHeader-font); /* Fonte personalizada */
+    font-size: 15px; /* Tamanho da fonte */
+    transition: color 0.3s ease; /* Suaviza a transição no hover */
 }
 
-.main-nav .nav-link:hover{
-    color: var(--brancoHover-fontColor);
-
+.main-nav .nav-link:hover {
+    color: var(--brancoHover-fontColor); /* Cor ao passar o mouse */
 }
 
-/*redes sociais*/
+/* Logo */
+.logo-container {
+    display: flex; /* Permite controle de alinhamento */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.logo {
+    width: 220px; /* Tamanho da logo */
+    height: auto; /* Mantém proporção da imagem */
+}
+
+/* Redes Sociais */
 .social-media {
-    display: flex;
-    gap: 20px;
+    display: flex; /* Exibe os ícones em linha */
+    gap: 20px; /* Espaçamento entre os ícones */
 }
 
 .social-icon {
-    width: 30px;
+    width: 30px; /* Tamanho fixo dos ícones */
+    height: 30px; /* Mantém proporção quadrada */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animações no hover */
 }
 
-.social-media a :hover {
-    background-color: rgb(250, 53, 250);
-    border-radius: 10px;
+.social-icon:hover {
+    transform: scale(1.1); /* Leve aumento ao passar o mouse */
+}
+
+/* Ajustes de Responsividade */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column; /* Empilha os elementos em telas menores */
+        align-items: center; /* Centraliza os itens */
+        padding: 20px;
+    }
+
+    .main-nav .nav-list {
+        gap: 15px; /* Reduz o espaçamento entre os links */
+        justify-content: center;
+    }
+
+    .social-media {
+        gap: 15px; /* Reduz o espaçamento entre os ícones */
+        justify-content: center;
+    }
+
+    .logo {
+        width: 60px; /* Reduz o tamanho da logo em telas menores */
+    }
+
+}
+
+/*Seçao banner*/
+
+
+
+/*Footer*/
+.footer-section {
+    background-color: var(--background-footer); /* Cor de fundo escura para contraste */
+    color: #ffffff; /* Texto branco para boa legibilidade */
+    padding: 20px; /* Espaçamento interno geral */
+    text-align: center; /* Centraliza os textos e ícones */
+    font-family: 'Arial', sans-serif; /* Fonte legível e padrão */
+}
+
+.footer-section a {
+    color: #ffffff; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado padrão */
+    margin: 0 10px; /* Espaçamento horizontal entre os links */
+    font-size: 14px; /* Tamanho de fonte apropriado */
+    transition: color 0.3s; /* Transição suave para hover */
+}
+
+.footer-section a:hover {
+    color: #f39c12; /* Cor de destaque ao passar o mouse */
+}
+
+.social-icons-footer {
+    margin-bottom: 15px; /* Espaçamento abaixo dos ícones sociais */
+    display: flex; /* Exibe os ícones em linha */
+    justify-content: center; /* Centraliza os ícones no rodapé */
+    gap: 15px; /* Espaçamento entre os ícones */
+}
+
+.social-icon-footer- {
+    width: 30px; /* Tamanho consistente dos ícones */
+    height: 30px; /* Tamanho consistente dos ícones */
+    transition: transform 0.3s ease; /* Efeito suave de hover */
+}
+
+.social-icon-footer-:hover {
+    transform: scale(1.2); /* Amplia o ícone levemente ao passar o mouse */
+}
+
+.footer-links {
+    margin-top: 15px; /* Espaçamento entre os links e os ícones sociais */
+    display: flex; /* Exibe os links em linha */
+    flex-wrap: wrap; /* Quebra os links em várias linhas, se necessário */
+    justify-content: center; /* Centraliza os links no rodapé */
+    gap: 10px; /* Espaçamento entre os links */
+}
+
+.footer-text {
+    margin-top: 15px; /* Espaçamento acima do texto de copyright */
+    font-size: 12px; /* Tamanho de fonte menor para texto secundário */
+    opacity: 0.8; /* Texto menos destacado */
 }
