@@ -24,12 +24,17 @@
 
 /* Header Geral */
 .main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline; /* Centraliza verticalmente os itens */
-    padding: 10px 50px;
-    background-color: #4b0082; /* Cor de fundo do header */
-    color: var(--brancoPadrao-fontColor); /* Cor padrão para texto */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(5px);
+    z-index: 10;
+    display: flex; /* Adicionado para organizar os itens em linha */
+    justify-content: space-between; /* Espaça os itens uniformemente */
+    align-items: center; /* Alinha os itens verticalmente */
 }
 
 /* Navegação */
@@ -102,12 +107,326 @@
     .logo {
         width: 60px; /* Reduz o tamanho da logo em telas menores */
     }
-
 }
 
+
 /*Seçao banner*/
+.banner-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px;
+    background-image: url('./assets/img/background-banner.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 100vh;
+    margin-bottom: -13em;
+}
 
+.banner-text {
+    max-width: 50%;
+}
 
+.banner-welcome {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-family: var(--textBanner-font);
+}
+
+.banner-title {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    color: #ffffff;
+    font-family: var(--textBanner-font);
+}
+
+.banner-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-family: var(--textBanner-font);
+}
+
+.button {
+    height: 42px;
+    margin-top: 20px;
+    display: inline-block;
+    padding: 8px 30px;
+    background-color: #909;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.button:hover {
+    background-color: rgb(150, 48, 150);
+}
+
+.banner-image-container {
+    position: relative;
+    max-width: 50%;
+}
+
+.banner-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-left: -5em;
+}
+
+.banner-icon-container {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(39%, -44%);
+}
+
+.banner-icon {
+    width: 135px;
+}
+
+.stats-container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(31%, 103%);
+    text-align: center;
+    color: #333;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stats-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.stats-description {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+hr {
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/*elemento carta*/
+.elemento-carta-container {
+    position: relative;
+    z-index: 2; /* Eleva o conteúdo acima do fundo da seção anterior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 90px auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+}
+
+.cartas-container {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-left: -30em;
+}
+
+/*seção sobre*/
+section.about-section {
+    margin-top: -12em;
+}
+
+.about-background-up {
+    margin-left: auto;
+}
+
+.background-icon {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-image-container {
+    flex: 2;
+    text-align: right;
+}
+
+.about-image {
+    max-width: 100%;
+    height: auto;
+    padding-left: 2em;
+}
+
+.about-text {
+    flex: 2;
+    padding-right: 20px;
+    text-align: left;
+    font-family: var(--textBanner-font);
+}
+
+.about-text h2 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.about-text h1 {
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.about-text p {
+font-size: 16px;
+font-weight: 400;
+}
+
+.experience-item p {
+    font-family: var(--textBanner-font);
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.experiences-container {
+    margin-top: 20px;
+}
+
+.experience-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.experience-icon {
+    margin-right: 10px;
+}
+
+.experience-divider {
+    margin: 10px 0;
+}
+
+.btn-read-more {
+    height: 42px;
+    margin-top: 20px;
+    display: inline-block;
+    padding: 8px 30px;
+    background-color: #909;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.btn-read-more:hover {
+    background-color: rgb(151, 51, 151);
+}
+
+/* Seção de serviços */
+.services-section {
+    padding: 50px 20px;
+    background: linear-gradient(0deg, #C881C7 0%, #F0F 100%);
+    text-align: center;
+}
+
+/* Títulos */
+.services-subtitle {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-family: var(--textBanner-font);
+    font-weight: 400;
+}
+
+.services-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 40px;
+    font-family: var(--textBanner-font);
+    font-weight: 700px;
+}
+
+/* Cartões de serviços */
+.services-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    
+}
+
+.service-card {
+    background-image: url(assets/img/card-background.png);
+    background-size: cover; /* Garante que a imagem cubra todo o fundo do cartão */
+    background-position: center; /* Centraliza a imagem no cartão */
+    padding: 46px;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+    color: white; /* Garante que o texto seja visível sobre a imagem de fundo */
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* Efeito ao passar o mouse sobre o cartão */
+}
+
+.service-card-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.service-card-title {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-family: var(--textBanner-font);
+    font-weight: 700;
+}
+
+.service-card-paragraph {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: var(--textBanner-font);
+    font-weight: 400;
+}
+
+/* Botão de consulta */
+a.btn-card-service {
+    height: 42px;
+    margin-top: 20px;
+    display: inline-block;
+    padding: 8px 30px;
+    background-color: #909;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+a.btn-card-service:hover {
+    background-color: rgb(155, 75, 155);
+}
+
+/* Linha de separação */
+.page-end-divider {
+    width: 5%;
+    border: 0;
+    border-top: 5px solid #909;
+    margin: 50px auto 0;
+    margin-bottom: 2em;
+}
+
+.page-end-divider:hover {
+    border-top: 5px solid rgb(156, 90, 156);
+}
 
 /*Footer*/
 .footer-section {
