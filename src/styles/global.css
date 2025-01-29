@@ -1,0 +1,16 @@
+@import url('header.css');
+
+:root {
+    --background-primary: #614C6D;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-primary);
+}
