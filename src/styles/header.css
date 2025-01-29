@@ -1,0 +1,109 @@
+header {
+    background-color: var(--background-header);
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+#navbar {
+    width: 100%;
+    display: flex; /* Deixa os itens na mesma linha */
+    justify-content: space-between; /* Distribui os itens */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 4px 0; /* Dá um espaçamento interno */
+}
+
+#nav_list {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 2em;
+    list-style: none;
+    padding: 1em 0;
+}
+
+.nav-items a {
+    display: inline-block;
+    font-family: 'Poppins', Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--color-neutral-1);
+    text-decoration: none;
+    transition: font-size 0.3s ease-in-out;
+}
+
+.nav-items a:hover {
+    transform: scale(1.1);
+}
+
+.nav-items.active a {
+    color: var(--color-link-hover);
+    border-bottom: 3px solid var(--color-neutral-1);
+}
+
+#social_media {
+    display: flex;
+}
+
+.social-media-link {
+    width: 100%;
+}
+
+.social-media-icon {
+    display: inline-block;
+    font-size: 3em;
+    padding: 0 32px;
+    color: var(--icon-color-header);
+    transition: font-size 0.3s ease-in-out;
+}
+
+.social-media-icon:hover {
+    color: var(--color-icon-hover);
+    transform: scale(1.2);
+}
+
+#mobile_menu {
+    display: none;
+}
+
+#mobile_btn {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    #nav_list {
+        display: none;
+    }
+
+    #mobile_menu.active {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #mobile_nav_list {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin: 1em 0;
+    }
+
+    #mobile_nav_list .nav-items {
+        list-style: none;
+        text-align: center;
+    }
+
+    #social_media {
+        display: none;
+    }
+    
+    #mobile_btn {
+        display: block;
+        border: none;
+        color: var(--icon-color-header);
+        background-color: transparent;
+        font-size: 3em;
+        cursor: pointer;
+    }
+
+}

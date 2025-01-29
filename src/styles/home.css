@@ -1,0 +1,51 @@
+#home .wrapper { /*Classe para centralizar o conteúdo de forma responsiva*/
+    max-width: 1280px; /* Define uma largura máxima */
+    margin: 0; /* Centraliza horizontalmente */
+    padding: 0 !important; /* Adiciona espaçamento interno nas laterais */
+}
+
+#home {
+    display: flex;
+    min-height: calc(100vh - 91px);
+    position: relative;
+}
+
+#cta {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 5%;
+    margin-left: 8em;
+}
+
+#cta .title {
+    font-size: 3em;
+    color: var(--color-neutral-1);
+}
+
+#cta .title span {
+    color: var(--text-span-color);
+}
+
+#cta .description {
+    font-size: 1.2rem;
+}
+
+#cta_button {
+    display: flex;
+    gap: 24px;
+}
+
+#cta_button a {
+    text-decoration: none;
+}
+
+#banner {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    width: 60%;
+    z-index: 2;
+}
+
