@@ -1,0 +1,45 @@
+.tarja-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#tarja {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+#list_tarja {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-tarja {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Garante que o ícone e o parágrafo fiquem alinhados verticalmente */
+}
+
+.item-tarja > i {
+    padding: 5px 2em;
+    font-size: 4em;
+    color: var(--text-btn-default-color);
+}
+
+.paragraph-stripe {
+    margin: 0; /* Remover margin auto */
+    text-align: center; /* Garantir que o texto no parágrafo seja centralizado */
+    color: var(--text-paragraph-header-color);
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1000px) {
+    #tarja {
+        display: none;
+    }
+}
