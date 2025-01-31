@@ -1,0 +1,14 @@
+.tarja-wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+#tarja {
+    display: flex;
+    margin: auto;
+}
+
+#list_tarja {
+    display: flex;
+}

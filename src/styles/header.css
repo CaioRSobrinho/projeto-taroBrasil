@@ -5,6 +5,12 @@ header {
     z-index: 3;
 }
 
+.header-wrapper { /*Classe para centralizar o conteúdo de forma responsiva*/
+    max-width: 1920px; /* Define uma largura máxima */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 0 5em; /* Adiciona espaçamento interno nas laterais */
+}
+
 #navbar {
     width: 100%;
     display: flex; /* Deixa os itens na mesma linha */
@@ -29,11 +35,12 @@ header {
     font-weight: 500;
     color: var(--color-neutral-1);
     text-decoration: none;
-    transition: font-size 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Suaviza a transformação e a mudança de cor */
 }
 
 .nav-items a:hover {
     transform: scale(1.1);
+    color: var(--color-link-hover); /* Defina a cor desejada no hover */
 }
 
 .nav-items.active a {
@@ -54,7 +61,7 @@ header {
     font-size: 3em;
     padding: 0 32px;
     color: var(--icon-color-header);
-    transition: font-size 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Adiciona transição suave */
 }
 
 .social-media-icon:hover {

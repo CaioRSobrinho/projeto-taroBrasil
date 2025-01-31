@@ -1,27 +1,31 @@
-#home .wrapper { /*Classe para centralizar o conteúdo de forma responsiva*/
-    max-width: 1280px; /* Define uma largura máxima */
-    margin: 0; /* Centraliza horizontalmente */
-    padding: 0 !important; /* Adiciona espaçamento interno nas laterais */
+.home-wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0;
 }
 
 #home {
     display: flex;
-    min-height: calc(100vh - 91px);
     position: relative;
+    background-image: url(../images/home/background_home.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
+
 #cta {
-    width: 60%;
     display: flex;
+    width: 60%;
     flex-direction: column;
     gap: 2em;
     margin-top: 5%;
-    margin-left: 8em;
+    margin-left: 5em;
 }
 
 #cta .title {
     font-size: 3em;
-    color: var(--color-neutral-1);
+    color: var(--text-title-header-color);
 }
 
 #cta .title span {
@@ -30,6 +34,7 @@
 
 #cta .description {
     font-size: 1.2rem;
+    color: var(--text-paragraph-header-color);
 }
 
 #cta_button {
@@ -41,11 +46,37 @@
     text-decoration: none;
 }
 
+#cta_button a:hover {
+    background-color: #bfa76a9d;
+}
+
 #banner {
     display: flex;
     align-items: start;
     justify-content: end;
-    width: 60%;
+    width: 40%;
     z-index: 2;
 }
 
+@media screen and (max-width: 1000px) {
+    #home {
+        min-height: 100%;
+        padding-top: 0;
+    }
+
+    #banner {
+        display: none;
+    }
+
+    #cta {
+        width: 100%;
+        margin: 5% 0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #cta_button {
+        justify-content: center;
+    }
+}
