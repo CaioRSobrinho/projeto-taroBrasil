@@ -1,0 +1,90 @@
+.services-wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+#services {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 1em;
+    background-image: url(../images/services/background-services.png);
+    background-color: #2E2E30;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#text_services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#cards-service {
+    display: flex;
+    justify-content: center;  /* Centraliza os cards */
+    flex-wrap: wrap;          /* Permite quebra de linha se precisar */
+    gap: 3em;                 /* Reduz a lacuna entre os cards */
+    padding: 2em;
+}
+
+.card-service {
+    display: flex;
+    flex-direction: column;   /* Garante que os itens fiquem organizados verticalmente */
+    justify-content: space-between; /* Distribui os elementos corretamente */
+    align-items: center;      /* Alinha os itens ao centro */
+    width: 25em;
+    height: 31em;
+    border: solid 1px #BFA76A;
+    border-radius: 0.62em;
+    padding: 1.5em;
+    text-align: center;
+    transition: background-color .5s ease;
+}
+
+.card-service:hover {
+    background-color: #2E2E30;
+}
+
+.icon-card {
+    width: 60px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.text-card {
+    flex-grow: 1; /* Permite que o conteúdo cresça e distribua melhor */
+    width: 100%;
+}
+
+.title-card {
+    color: var(--text-title-card-color);
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-bottom: 0.5em;
+}
+
+.paragraph-card {
+    color: var(--text-paragraph-card-color);
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 1em;
+}
+
+.btn-default {
+    width: 120px;
+    padding: 0.8em;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--button-bg-color);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: auto; /* Empurra o botão para o final */
+}
