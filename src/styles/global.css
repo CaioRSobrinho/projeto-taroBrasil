@@ -5,6 +5,7 @@
 @import url('stripe.css');
 @import url('services.css');
 @import url('about.css');
+@import url('footer.css');
 
 :root {
     --background-body: #382342;

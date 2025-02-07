@@ -25,7 +25,7 @@
     text-align: center;
 }
 
-#cards-service {
+#cards_service {
     display: flex;
     justify-content: center;  /* Centraliza os cards */
     flex-wrap: wrap;          /* Permite quebra de linha se precisar */

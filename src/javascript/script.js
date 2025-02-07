@@ -29,8 +29,33 @@ ScrollReveal().reveal('#banner', {
     duration: 2000,
     distance:'20%'
 })
+
 ScrollReveal().reveal('#list_tarja', {
     origin: 'top',
-    duration: 1000,
+    duration: 3000,
     distance:'20%'
+})
+
+ScrollReveal().reveal('#picture_about', {
+    origin: 'left',
+    duration: 3000,
+    distance:'20%'
+})
+
+ScrollReveal().reveal('#text_about', {
+    origin: 'right',
+    duration: 3000,
+    distance:'20%'
+})
+
+ScrollReveal().reveal('#text_services', {
+    origin: 'top',
+    duration: 2000,
+    distance:'10%'
+})
+
+ScrollReveal().reveal('#cards_service', {
+    origin: 'top',
+    duration: 2000,
+    distance:'10%'
 })
